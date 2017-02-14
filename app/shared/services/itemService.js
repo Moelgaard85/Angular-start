@@ -1,4 +1,4 @@
-angular.module('ibg')
+angular.module('app')
 .service('itemService', ['$log', 'Flash', 
  function($log, Flash){
 

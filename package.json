@@ -1,6 +1,6 @@
 {
   "name": "angular-start",
-  "version": "1.0.0",
+  "version": "1.0.27",
   "description": "Angular Start - A seed project to quickly start building an Angular project - Developer: Bjarne Gerhardt-Pedersen",
   "main": "gulpfile.js",
   "dependencies": {

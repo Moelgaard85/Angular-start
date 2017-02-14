@@ -1,19 +1,19 @@
- angular.module('ibg')
+ angular.module('app')
  .controller('dashboardController', ['$scope', '$rootScope', 'DATA', '$log', 'dashboardService',
   function($scope, $rootScope, DATA, $log, dashboardService) {
+
     $scope.allItems = [];
-    $scope.selectedItem = null;
 
-    // Fetch Activities
-    DATA.fetchActivities()
-    .then(function(response) {
-      $scope.allItems = dashboardService.convertItems(response);
-      $log.debug("dashboardController: fetchActivities $scope.allItems: ", $scope.allItems);
-    });
-
-    $scope.selectActivity = function(item, index) {
-      $scope.selectedItem = item;
-      $scope.tabIndex = index;
+    // Fetch People
+    $scope.fetchPeople = function(){
+      DATA.fetchPeople()
+      .then(function(response) {
+        $scope.allItems = dashboardService.convertItems(response);
+        $log.debug("dashboardController: fetchPeople $scope.allItems: ", $scope.allItems);
+      });
     };
-  }
-]);/*dashboardController*/
+
+    $scope.fetchPeople();
+
+
+  }]);/*dashboardController*/

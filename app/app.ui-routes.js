@@ -1,7 +1,7 @@
-ibg.config(['$stateProvider', '$urlRouterProvider',
+app.config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
     // Default route - Defines what state is the beginning state of the app. Since its set to a sub-state, the parent main state will automatically be loaded first.
-    $urlRouterProvider.otherwise('main.dashboard');
+    $urlRouterProvider.otherwise('dashboard');
 
     // Main parent state of all states. 
     $stateProvider

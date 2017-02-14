@@ -1,1 +1,11 @@
 @import 'variables';
+
+.header {
+  background-color: $graylight;
+}
+
+.person {
+  border: 1px solid $black;
+  margin-bottom: 5px;
+  padding: 5px;
+}
