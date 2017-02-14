@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html xml:lang="da" lang="da" id="ng-app" ng-app="app">
+  <head>
+    <title>Angular Start</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Angular Start">
+    <meta name="author" content="Bjarne Gerhardt-Pedersen">
+    <meta name="host" content="https://bmgpmedia.dk">
+    <meta name="linkage" content="https://bmgpmedia.dk">
+
+    <!-- GULP VERSION BELOW -->
+    <link href="assets/compressed/styles.min.css?v4.0.195" rel="stylesheet" />
+
+    <!--
+      IE8 support, see AngularJS Internet Explorer Compatibility http://docs.angularjs.org/guide/ie
+      For Firefox 3.6, you will also need to include jQuery and ECMAScript 5 shim
+    -->
+    
+    <!--[if lt IE 9]>
+      <script src="assets/external/js/fallback/jquery-1.11.0.js"></script>
+      <script src="assets/external/js/fallback/es5-shim.js"></script>
+      <script src="assets/external/js/fallback/html5shiv-3.7.0.min.js"></script>
+      <script src="assets/external/js/fallback/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--********** ui-view **************-->
+    <div ui-view class="page-wrapper"></div> 
+    <!--********** ui-view **************-->
+
+    <!-- CONFIGURATION -->
+    <script type="text/javascript" src="conf.js?v4.0.195"></script>
+    <script type="text/javascript">
+      var SERVER_URL_API = PULS1_URL_API;
+      
+      var url = window.location.href;
+      var arr = url.split("/");
+      var DOMAIN_URL = arr[0] + "//" + arr[2];
+    </script>
+
+    <!-- GULP FILES BELOW -->
+    <script type="text/javascript" src="assets/compressed/init.min.js?v4.0.195"></script>
+    <script type="text/javascript" src="assets/compressed/features.min.js?v4.0.195"></script>
+    <script type="text/javascript" src="assets/compressed/app.min.js?v4.0.195"></script>
+  </body>
+</html>
